@@ -2,9 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Layout from './components/layout';
+import Home from './views/home';
 
 function App() {
-  return <Layout>app</Layout>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
 
 export default App;

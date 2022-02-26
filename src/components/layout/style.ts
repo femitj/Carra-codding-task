@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
   background-color: #ccc;
   padding: 15px 30px;
   .head {
@@ -30,8 +26,26 @@ export const NavBar = styled.div`
     display: flex;
     align-items: center;
     .favorite-list-icon {
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     .favorite-list-number {
+      background: #a4a4a4;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
