@@ -1,8 +1,12 @@
 import styled from 'styled-components';
+import device from '../../utils/device';
 
 const Wrapper = styled.div`
   background: RGBA(173, 255, 41, 0.5);
   padding: 45px 80px;
+  @media ${device.maxmobileL} {
+    padding: 45px 15px;
+  }
 
   .item-cont {
     display: flex;
@@ -20,7 +24,7 @@ const Wrapper = styled.div`
       .overlay-wrap {
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 60px;
         left: 0;
         right: 0;
         background: #ccc;
@@ -35,6 +39,9 @@ const Wrapper = styled.div`
         align-items: center;
         margin-bottom: 10px;
         position: relative;
+        @media ${device.maxmobileL} {
+          width: 100%;
+        }
         .main-img {
           width: 75%;
           height: 75%;

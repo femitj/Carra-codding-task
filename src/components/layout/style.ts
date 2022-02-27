@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
   background-color: #ccc;
   padding: 15px 30px;
   .head {
