@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Wrapper from './style';
 import axios from 'axios';
-import favorite from '../../assets/favorite-dark.png';
-import unFavorite from '../../assets/unfavorite.png';
+import Favorite from '../../components/Favorite';
+
 import { CatalogueContext } from '../../store/context/CatalogueContext';
 
 type Props = {};
@@ -49,22 +49,13 @@ const Home: React.FC<Props> = (props) => {
                 {item?.discontinued ? <div className='overlay-wrap' /> : ''}
                 <div className='item-img'>
                   <img src={item?.image} className='main-img' alt='main' />
-                  <img
-                    alt='favorite'
-                    src={
-                      selected.find((o) => o.id === item.id)
-                        ? favorite
-                        : unFavorite
-                    }
-                    className='sub-img add-cursor'
-                    onClick={() => {
-                      if (like && selected.find((o) => o.id === item.id)) {
-                        handleRemove(item.id);
-                      } else {
-                        handleAdd(item);
-                      }
-                      setLike(!like);
-                    }}
+                  <Favorite
+                    selected={selected}
+                    item={item}
+                    handleAdd={handleAdd}
+                    handleRemove={handleRemove}
+                    like={like}
+                    setLike={setLike}
                   />
                 </div>
                 <div className='item-text'>
