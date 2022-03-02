@@ -3,9 +3,9 @@ import { NavBar as Wrapper } from './style';
 import favorite from '../../assets/favorite-dark.png';
 import { CatalogueContext } from '../../store/context/CatalogueContext';
 
-interface Props {}
+type Props = {};
 
-const NavBar = (props: Props) => {
+const NavBar: React.FC<Props> = (props) => {
   const { selected, handleSelected } = useContext(CatalogueContext);
   const [showDropdown, setShowDropdown] = useState(false);
 

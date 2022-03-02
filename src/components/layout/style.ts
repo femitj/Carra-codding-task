@@ -48,3 +48,12 @@ export const NavBar = styled.div`
     }
   }
 `;
+
+export const displayDropdown = {
+  minHeight: '50px',
+  minWidth: '250px',
+  position: 'absolute',
+  background: '#fff',
+  top: '50px',
+  zIndex: 1000,
+};

@@ -5,9 +5,9 @@ import favorite from '../../assets/favorite-dark.png';
 import unFavorite from '../../assets/unfavorite.png';
 import { CatalogueContext } from '../../store/context/CatalogueContext';
 
-interface Props {}
+type Props = {};
 
-const Home = (props: Props) => {
+const Home: React.FC<Props> = (props) => {
   const { selected, handleSelected } = useContext(CatalogueContext);
   const [catalogue, setCatalogue] = useState([]);
   const [like, setLike] = useState(false);
@@ -39,8 +39,6 @@ const Home = (props: Props) => {
     arr.push(id);
     handleSelected(arr);
   };
-
-  console.log('>>>', selected);
 
   return (
     <Wrapper>
