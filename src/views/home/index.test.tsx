@@ -14,8 +14,8 @@ test('renders categories', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-describe('when the score is above 60% ', () => {
-  it('displays a happy face', () => {
+describe('clickable image alt is favorite ', () => {
+  it('displays favorite', () => {
     const { getByAltText } = render(
       <Favorite
         selected={[{ id: 2 }]}
