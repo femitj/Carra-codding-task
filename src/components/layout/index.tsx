@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import NavBar from './navBar';
 import Wrapper from './style';
 
-const Layout = ({ children }: any) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout: FC<Props> = ({ children }) => {
   return (
     <Wrapper>
       <NavBar />
